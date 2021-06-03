@@ -1,6 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {GroupPreference} from "./Preferences";
+
+class App extends Component {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            group_preferences : null
+        };
+    }
 
     //changes the preferences
     changePreferences = (event: any) => {
