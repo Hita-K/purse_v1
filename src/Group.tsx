@@ -17,6 +17,9 @@ export class Group extends Component<{}, GroupState> { // representation of part
         };
     }
 
+    removeGroup() {
+
+    }
     render() {
         return (
             <div className="boxed">

@@ -28,7 +28,9 @@ class App extends Component {
               <input id="skilled" type="checkbox" onClick={this.changePreferences} /><br/>
               <p>Number of Groups </p>
               <input type="text" name="enter" value="" id="numgroup"/><br/>
-              <GroupList children=""/>
+              <GroupList id="group_list"/>
+              <GroupAdder g="group_list" props={this.props}/>
+              <input id="submit" type="button" value="submit"/>
 
           </header>
 

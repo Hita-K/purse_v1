@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import {Group} from "./Group";
 
 export class GroupList extends Component<{}, GroupListState> {
