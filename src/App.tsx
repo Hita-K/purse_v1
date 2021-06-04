@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {GroupPreference} from "./Preferences";
+import {GroupList} from "./GroupList";
 
 class App extends Component {
     constructor(props: any) {
@@ -23,9 +24,11 @@ class App extends Component {
             <p>
               Welcome to PURSE!
             </p>
-            <input id="skilled" type="checkbox" onClick={this.changePreferences} />Require experience<br/>
-              <input type="text" name="enter" value="" id="numgroup"/> Number of Groups <br/>
-
+              <p>Require experience</p>
+              <input id="skilled" type="checkbox" onClick={this.changePreferences} /><br/>
+              <p>Number of Groups </p>
+              <input type="text" name="enter" value="" id="numgroup"/><br/>
+              <GroupList children=""/>
 
           </header>
 
