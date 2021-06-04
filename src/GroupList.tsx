@@ -5,11 +5,17 @@ export class GroupList extends Component<{}, GroupListState> {
     constructor(props: any, group_number: number) {
         super(props);
         this.state = {
-            // groups : [new Group(this.props, "A"), new Group(this.props, "B")]
-            groups : [new Group(this.props, "A")],
-            groupA : new Group(this.props, "A"),
-            groupB : new Group(this.props, "B")
+            id : "group B",
+            groups : [new Group(this.props, "A")]
         }
+    }
+
+    addGroup(group : Group) {
+        this.state.groups.push(group);
+    }
+
+    createGroups(group_num : number) {
+        //
     }
 
     getGroups() {
@@ -25,8 +31,6 @@ export class GroupList extends Component<{}, GroupListState> {
     render() {
         return (
             <div className="GroupList">
-                <ul>{this.state.groupA.render()}</ul>
-                <ul>{this.state.groupB.render()}</ul>
                 <div>{this.getGroups()}</div>
             </div>
         );
@@ -34,7 +38,6 @@ export class GroupList extends Component<{}, GroupListState> {
 }
 
 interface GroupListState {
-    groups: Group[],
-    groupA : Group,
-    groupB : Group
+    id: string,
+    groups: Group[]
 }

@@ -4,7 +4,7 @@ Defines Group and Member objects within context of group builder
 
 import React, {Component} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
 export class Group extends Component<{}, GroupState> { // representation of participant groupings
     constructor(props: any, name: string) {
@@ -25,8 +25,7 @@ export class Group extends Component<{}, GroupState> { // representation of part
             <div className="boxed">
                 <p>{this.state.group_name}</p>
                 <div>
-                    <FontAwesomeIcon icon={faPlusSquare}/>
-                    <button type="button"/>
+                    <button onclick="removeGroup()"><FontAwesomeIcon icon={faMinus}/></button>
                 </div>
             </div>
         );

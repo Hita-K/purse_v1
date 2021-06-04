@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {GroupPreference} from "./Preferences";
+import {GroupAdder} from "./GroupMenu";
 import {GroupList} from "./GroupList";
 
 class App extends Component {
